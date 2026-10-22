@@ -201,7 +201,7 @@ body{
   margin-bottom: 8px;
 }
 
-/* Skills */
+/* Skills - UPDATED: Percentage only, no dash/bar */
 .skills-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -213,24 +213,26 @@ body{
   border: 1px solid rgba(255,255,255,0.06);
   padding: 18px;
   border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .skill-card p{
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #fff;
 }
 
+.skill-card .percent{
+  font-weight: 700;
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+/* hide old bar if still in HTML */
 .bar{
-  height: 10px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.bar span{
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  border-radius: 999px;
+  display: none;
 }
 
 /* Projects */
